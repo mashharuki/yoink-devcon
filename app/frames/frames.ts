@@ -1,11 +1,7 @@
 import { createFrames } from "frames.js/next";
 
-type State = {
-  counter: number;
-};
-
-export const frames = createFrames<State>({
+export const frames = createFrames({
   basePath: "/frames",
-  initialState: { counter: 0 },
   debug: process.env.NODE_ENV === "development",
+  middleware: [],
 });

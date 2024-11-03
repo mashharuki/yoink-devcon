@@ -16,13 +16,16 @@ export default function MiniappPage({
 
   const [message, setMessage] = useState<any>(null);
 
-  const handleMessage = useCallback((m: MessageEvent) => {
-    console.log("received", m);
+  const handleMessage = useCallback(
+    (m: MessageEvent) => {
+      console.log("received", m);
 
-    if (m.source === windowObject?.parent) {
-      setMessage(m.data);
-    }
-  }, []);
+      if (m.source === windowObject?.parent) {
+        setMessage(m.data);
+      }
+    },
+    [windowObject?.parent]
+  );
 
   useEffect(() => {
     windowObject?.addEventListener("message", handleMessage);
@@ -30,7 +33,7 @@ export default function MiniappPage({
     return () => {
       windowObject?.removeEventListener("message", handleMessage);
     };
-  }, []);
+  }, [handleMessage, windowObject]);
 
   const handleSubmit = useCallback(
     (e: React.FormEvent<HTMLFormElement>) => {

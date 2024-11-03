@@ -62,7 +62,7 @@ export function Frame({
       <div className="w-full max-w-[600px] mx-auto space-y-2">
         <div className="flex justify-between items-center">
           <h1 className="font-semibold">{getTitle(metadata)}</h1>
-          <DebugLink url={url} />
+          {process.env.NODE_ENV === "development" && <DebugLink url={url} />}
         </div>
         {process.env.NODE_ENV === "development" ? (
           <div

@@ -1,6 +1,12 @@
-# Frames.js Starter Kit
+# 🚩 yoink-devcon
 
-This is a boilerplate repo to get started quickly with `frames.js`
+Code for Yoink, a simple frame-based "capture the flag" game.
+
+See also:
+- [`yoink-contracts`](https://github.com/horsefacts/yoink-contracts): the smart contract.
+- [`yoink-indexer`](https://github.com/horsefacts/yoink-indexer): the indexer.
+
+Based on the `frames.js` boilerplate repo.
 
 ## Quickstart
 
@@ -36,5 +42,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 ```bash
 vercel
 ```
-
-more deployment links coming soon, PRs welcome!
