@@ -1,0 +1,12 @@
+{
+  "name": "contract",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": "true",
+  "scripts": {
+    "fmt": "forge fmt --check",
+    "build": "forge build",
+    "test": "forge test -vvv"
+  }
+}
